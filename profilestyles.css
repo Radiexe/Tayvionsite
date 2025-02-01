@@ -48,11 +48,14 @@ body {
 /* Typing animation for the name */
 .typing-animation {
   font-size: 2.5rem;
-  overflow: hidden; /* Hide overflow */
-  white-space: nowrap; /* Keep text in one line */
-  border-right: 3px solid white; /* Cursor effect */
-  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+  display: inline-block;
+  max-width: 90vw; /* Prevents text from overflowing the screen */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: typing 3s steps(20, end) forwards, blink-caret 0.75s step-end infinite;
 }
+
 
 /* Typing effect */
 @keyframes typing {
@@ -119,22 +122,29 @@ footer {
     color: white;
   }
 
-  @media (max-width: 768px) {
+/* Adjust for medium screens */
+@media (max-width: 768px) {
   .typing-animation {
-    font-size: 2rem; /* Smaller font on mobile */
+    font-size: 1.8rem; 
+    max-width: 80vw; /* Further constraint */
   }
+}
 
-  .job-title {
-    font-size: 1.2rem;
+/* Adjust for small phones */
+@media (max-width: 480px) {
+  .typing-animation {
+    font-size: 1.5rem;
+    max-width: 75vw; /* Even smaller constraint */
   }
+}
 
-  .resume-link {
-    padding: 8px 16px;
-    font-size: 1rem;
+/* Typing effect fix */
+@keyframes typing {
+  from {
+    width: 0;
   }
-
-  .profile-pic {
-    width: 120px;
-    height: 120px;
+  to {
+    width: 100%;
+    max-width: inherit; /* Ensure it doesn't go beyond the screen */
   }
 }
