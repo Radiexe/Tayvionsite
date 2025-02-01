@@ -118,4 +118,23 @@ footer {
   footer a:hover {
     color: white;
   }
-  
+
+  @media (max-width: 768px) {
+  .typing-animation {
+    font-size: 2rem; /* Smaller font on mobile */
+  }
+
+  .job-title {
+    font-size: 1.2rem;
+  }
+
+  .resume-link {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
