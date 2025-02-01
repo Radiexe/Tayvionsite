@@ -1,0 +1,103 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Styling for the Home Button */
+.home-button {
+    position: absolute; /* To position the button at the top-left of the page */
+    top: 20px;
+    left: 20px;
+    background-color: #4a148c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .home-button:hover {
+    background-color: #1b5e20;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+  }
+  
+  /* Focus state (accessibility) */
+  .home-button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+  }
+  
+  /* Flowing gradient background */
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4a148c, #1b5e20);
+    background-size: 200% 200%;
+    animation: gradientFlow 8s ease infinite;
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+  
+  /* Gradient flow animation */
+  @keyframes gradientFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Resume Container */
+  /* Resume Container */
+  .resume-container {
+    text-align: left; /* Align text to the right inside the container */
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Ensure scrolling */
+    margin: 0 auto; /* Center the container horizontally */
+  /* Resume Title */
+  .resume-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Typing Animation */
+  .typing-animation {
+    overflow: hidden;
+    white-space: pre-wrap; /* Preserve line breaks and spacing */
+    border-right: 3px solid white;
+    animation: typing 5s steps(100, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+  }  
