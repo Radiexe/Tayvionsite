@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Auto-scroll to bottom as text appears
             typingElement.scrollIntoView({ behavior: "smooth", block: "end" });
 
-            setTimeout(typeResume, 10); // Typing speed
+            setTimeout(typeResume, 5); // Typing speed
         }
     }
 
