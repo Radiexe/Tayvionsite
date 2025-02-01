@@ -32,17 +32,15 @@
   }
   
   /* Flowing gradient background */
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    min-height: 100vh;
+    display: block; /* Ensure normal page flow */
     background: linear-gradient(135deg, #4a148c, #1b5e20);
     background-size: 200% 200%;
     animation: gradientFlow 8s ease infinite;
     font-family: 'Arial', sans-serif;
     color: white;
-  }
+}
   
   /* Gradient flow animation */
   @keyframes gradientFlow {
@@ -59,20 +57,20 @@
   
   /* Resume Container */
   /* Resume Container */
-  .resume-container {
-    text-align: left; /* Align text to the right inside the container */
+.resume-container {
+    text-align: left;
     max-width: 800px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    overflow-y: auto; /* Ensure scrolling */
-    margin: 0 auto; /* Center the container horizontally */
-  /* Resume Title */
-  .resume-title {
+    margin: 0 auto;
+}
+
+.resume-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-  }
+}
   
   /* Typing Animation */
   .typing-animation {
